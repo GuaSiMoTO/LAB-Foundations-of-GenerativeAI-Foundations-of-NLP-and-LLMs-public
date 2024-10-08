@@ -19,9 +19,23 @@ Fork the provided GitHub repository to your account, and clone it locally. This 
 - [Learn how to fork this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
 - Clone this repo into your code/labs folder.
 
+```bash
+git clone https://github.com/codeskills-ai/LAB-Foundations-of-NLP-and-LLMs.git
+cd LAB-Foundations-of-NLP-and-LLMs
+```
+
 ### Setup Instructions
 
-Create a virtual environment and install the required packages. Once your environment is ready, start Jupyter Notebook to begin working on the exercises.
+Create a virtual environment and install the required packages.
+```bash
+pip install -r requirements.txt
+```
+
+ Once your environment is ready, start Jupyter Notebook to begin working on the exercises.
+
+ ```bash
+jupyter notebook
+```
 
 ---
 
