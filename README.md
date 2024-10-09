@@ -41,32 +41,35 @@ jupyter notebook
 
 ## Iteration 1: Tokenization and Text Preprocessing
 
-- Import the necessary libraries from the Hugging Face `transformers` library.
-- Choose a pre-trained tokenizer (such as BERT or GPT) and tokenize a given sentence.
-- Explore the tokenization process by converting the tokens back into words.
+- Import the BERT tokenizer: Use the pre-trained BERT tokenizer from the Hugging Face transformers library.
+- Tokenize a sentence: Input the following sample sentence: "Natural language processing is transforming the way computers understand human language."
+- Convert tokens back to words: After tokenizing the sentence, convert the tokens back to human-readable text to understand how BERT processes the input.
 
 ---
 
 ## Iteration 2: Understanding Embeddings
 
-- Define a function to extract embeddings from a pre-trained model.
-- Visualize the embeddings using techniques like PCA or t-SNE to see how similar words are clustered.
+- Load BERT model: Use the pre-trained BERT model (bert-base-uncased) from Hugging Face.
+- Extract embeddings: Pass the same sample sentence from Iteration 1 through BERT and extract the token embeddings.
+- Visualize embeddings: Apply dimensionality reduction (e.g., PCA or t-SNE) to visualize the token embeddings in 2D space. Identify how semantically similar words cluster together.
 
 ---
 
 ## Iteration 3: Text Classification Task
 
-- Load a pre-trained text classification model from Hugging Face.
-- Preprocess a dataset and perform classification using the model.
-- Evaluate the model’s performance using metrics such as accuracy and F1-score.
+- Load the DistilBERT model: Use the pre-trained DistilBERT model (distilbert-base-uncased) from Hugging Face for a binary sentiment classification task (positive/negative).
+- Dataset: Use the IMDb movie reviews dataset. Preprocess the dataset by tokenizing the text using the DistilBERT tokenizer.
+- Perform classification: Input a review (e.g., "The movie was fantastic!") and classify it as either positive or negative.
+- Evaluate performance: Use metrics like accuracy and F1-score to evaluate the model's performance on the test dataset.
 
 ---
 
 ## Iteration 4: Text Summarization Task
 
-- Use a pre-trained summarization model from Hugging Face (e.g., BART or T5).
-- Summarize a sample article and evaluate the quality of the summary.
-- Experiment with different prompts to generate summaries of varying lengths and focus.
+- Load the BART model: Use the pre-trained BART model (facebook/bart-large-cnn) from Hugging Face for text summarization.
+- Input text: Use the following text from a news article or choose a lengthy paragraph from any resource: "Artificial intelligence is reshaping many industries by automating tasks, providing deep insights, and creating new ways to solve complex problems..."
+- Generate a summary: Use BART to summarize the text into a few sentences.
+- Experiment with length: Modify the prompt or parameters to generate a more detailed or a more concise summary.
 
 ---
 
@@ -79,15 +82,20 @@ jupyter notebook
 
 ## Iteration 6: Cross-Validation of Text Generation
 
-- Generate text from different models and observe the variations in coherence and fluency.
-- Visualize the attention mechanisms of a transformer model during the text generation process.
+- Load GPT-2 and BERT: Use the pre-trained GPT-2 (gpt2) and BERT (bert-base-uncased) models from Hugging Face.
+- Task: Use both models to generate text from the following prompt: "In the future, artificial intelligence will change the way humans...".
+- Compare outputs: Generate text using GPT-2 and classify text using BERT (for sentiment analysis) using the same dataset as in Iteration 3.
+- Evaluate text consistency: Analyze the fluency and coherence of the generated text. Are there any common issues such as repetition, nonsensical text, or logical gaps?
 
 ---
 
 ## Bonus: Fine-Tuning a Pre-trained Model
 
-- Fine-tune a pre-trained LLM on a custom dataset.
-- Use this fine-tuned model for text classification or summarization, and compare the results to the original pre-trained model.
+- Dataset: Use the IMDb movie reviews dataset again but fine-tune the DistilBERT model to better handle sentiment classification.
+
+- Fine-tune DistilBERT: Fine-tune the DistilBERT model on the IMDb dataset, adjusting the learning rate and other hyperparameters to optimize performance.
+
+- Evaluate the model: After fine-tuning, evaluate the model’s performance on a validation set. Compare the results to the original pre-trained model.
 
 ---
 
