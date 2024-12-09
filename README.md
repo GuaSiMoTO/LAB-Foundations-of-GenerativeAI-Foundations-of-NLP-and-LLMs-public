@@ -42,75 +42,77 @@ jupyter notebook
 
 ---
 
-## **Iteration 1: Tokenization for Summarization**
-
-1. **Tokenizing Input Text**:
-   Use the BART tokenizer to process a sample text for summarization.
-   - Input a sample text and tokenize it to understand how the model processes input data.
-
-2. **Inspecting Tokens**:
-   Convert token IDs back to words to see how the text is tokenized.
-
-3. **Reflection**:
-   - Why is tokenization essential for LLMs?
-   - How does the tokenizer handle long text (truncation)?
+## Iteration 1: Loading and Configuring the Ollama Model
+1. Ensure **Ollama** is running and accessible in your local environment.
+2. Set up the necessary configurations for interacting with **Ollama**.
+   - Define a function to send prompts to **Ollama** and receive the model's response.
 
 ---
 
-## **Iteration 2: Generating a Summary with BART**
-
-1. **Load the BART Model**:
-   Import and initialize the pre-trained **BART** model.
-
-2. **Generate a Summary**:
-   - Use the tokenized input to generate a summary using the BART model.
-   - Experiment with parameters like `max_length`, `min_length`, and `num_beams` to explore how they affect the output.
+## Iteration 2: Text Summarization with Ollama
+1. Choose a text file (`article.txt`) containing substantial content for summarization.
+2. Generate a summary using **Ollama**:
+   - Design a prompt to instruct **Ollama** to summarize the text.
+   - Define a function that sends the prompt and text to **Ollama** and retrieves the summary.
+   - Save the summary to `summary_ollama.txt`.
 
 ---
 
-## **Iteration 3: Extracting and Visualizing Embeddings**
+## Iteration 3: Translating Text with Ollama
+1. **Generate a Translation**:
+   - Use a prompt to instruct **Ollama** to translate the text from English to Spanish.
+   - Experiment with variations in the prompt to explore how it affects the translation output.
 
-1. **Extract Embeddings**:
-   Use the encoder of the BART model to extract embeddings for the tokenized input text.
-   - Pass the tokenized text through the model's encoder and obtain the output embeddings.
-
-2. **Dimensionality Reduction**:
-   Reduce the dimensionality of the embeddings using **PCA** or **t-SNE** to visualize the high-dimensional data in 2D or 3D.
-
-3. **Visualize Embeddings**:
-   Plot the embeddings to see how semantically similar tokens cluster together.
-
-4. **Discussion**:
-   - How do embeddings represent the meaning of the input tokens?
-   - Are semantically related tokens clustered together?
+2. **Save Translations**:
+   - Save the translations to a file `translations_ollama.txt`.
 
 ---
 
-## **Iteration 4: Evaluating the Quality of Summarization**
-
-1. **Manually Compare Summaries**:
-   - Compare the generated summary with the original text.
-   - Does it capture the main ideas concisely and accurately?
-
-2. **Analyze Key Metrics**:
-   Discuss metrics like:
-   - **Coherence**: Are the ideas in the summary logically connected?
-   - **Relevance**: Does the summary focus on important details?
+## Iteration 4: Sentiment Analysis with Ollama
+1. Prepare a set of short texts with sentiment labels (positive, negative, neutral).
+2. Use a prompt to instruct **Ollama** to analyze the sentiment of each text:
+   - Define a function to send the text and prompt to **Ollama** and retrieve the sentiment label.
+   - Save the predictions to `sentiments_ollama.txt`.
 
 ---
 
-## **Final Reflection**
+## Iteration 5: Final Evaluation
+1. Reflect on the tasks performed and answer key questions:
+   - How effective was **Ollama** for text summarization? What were the strengths and limitations?
+   - How effective was **Ollama** for sentiment analysis? What differences did you observe?
+   - How well did **Ollama** perform for text translation? Were there any noticeable patterns or limitations?
 
-1. **Why is NLP Critical for Summarization?**
-   - **Tokenization**: Converts text into tokens that LLMs can process.
-   - **Embeddings**: Encodes the semantic meaning of the input, enabling the model to generate coherent outputs.
-   - **Preprocessing**: Ensures input compatibility and efficiency.
+## Bonus: Fine-Tuning Ollama for Custom Outputs
 
-2. **Questions for Discussion**:
-   - How does visualizing embeddings help us understand the internal workings of the model?
-   - What happens if tokenization or preprocessing is skipped?
+In this bonus exercise, you will explore the **Ollama** model’s ability to generate customized outputs based on specific contexts. Your task is to modify prompts and experiment with different approaches to create audience-specific summaries and varying lengths of outputs using the article provided.
 
----
+### Instructions:
+
+#### 1. Customizing the Prompt:
+- Modify the prompt to focus on different aspects of the `article.txt`.
+- Examples of custom prompts include:
+  - *"Summarize the text focusing on AI's impact in medical imaging."*
+  - *"Translate the text emphasizing AI's role in streamlining administrative tasks in healthcare."*
+
+- Compare the results and reflect on how variations in prompts affect the output.
+
+#### 2. Evaluating Coherence:
+- Generate multiple outputs of the same task using slight changes in the prompt (e.g., focusing on different sections or aspects).
+- Evaluate the coherence and consistency of each output. Which prompts led to the most accurate and clear results? Why?
+
+#### 3. Audience-Specific Outputs:
+- Create outputs for different audiences. For example:
+  - *"Generate a summary for healthcare professionals."*
+  - *"Translate the article for patients interested in AI applications in healthcare."*
+
+- Analyze how the content changes based on the audience. Does the model successfully adapt the information to match the audience's needs?
+
+#### 4. Output Length:
+- Experiment with output length by varying the prompts:
+  - *"Provide a brief summary of the article."*
+  - *"Provide a detailed summary of the article."*
+
+- Compare the results and evaluate how the level of detail and accuracy shifts with different lengths.
 
 ## Submission
 
