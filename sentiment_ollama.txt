@@ -1,0 +1,9 @@
+
+Text: ['I love the new design of the product!', 'The service was terrible and disappointing.', 'It’s okay, but nothing special.', 'This is absolutely amazing! Exceeded all my expectations!', 'Oh great, another bug in the software...', 'The package arrived on time with standard shipping.', "I regret buying this, it's completely useless."]
+Sentiment: POSITIVE, Score: 95%
+Text: ['The service was terrible and disappointing.'] Sentiment: NEGATIVE, Score: 80%
+Text: ['It’s okay, but nothing special.'] Sentiment: NEUTRAL, Score: 40%
+Text: ['This is absolutely amazing! Exceeded all my expectations!'] Sentiment: POSITIVE, Score: 98%
+Text: ['Oh great, another bug in the software...'] Sentiment: NEGATIVE, Score: 75%
+Text: ['The package arrived on time with standard shipping.'] Sentiment: NEUTRAL, Score: 30%
+Text: ['The app works well, though the interface could improve.'] Sentiment: NEGATIVE, Score: 50%
